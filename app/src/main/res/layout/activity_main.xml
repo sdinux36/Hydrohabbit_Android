@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    >
+
+    <ImageView
+        android:id="@+id/bcimg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center"
+        />
+
+    <!-- Heading -->
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Daily Water Intake Calculator"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:textSize="35sp"
+        android:gravity="center"
+        android:shadowColor="#80000000"
+    android:shadowDx="4"
+    android:shadowDy="4"
+    android:shadowRadius="6"
+        />
+
+    <!-- Age Input -->
+    <LinearLayout
+        android:id="@+id/ageInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heading"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Age"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:shadowColor="#80000000"
+            android:shadowDx="4"
+            android:shadowDy="4"
+            android:shadowRadius="6" />
+
+        <EditText
+            android:id="@+id/ageEditText"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:background="@drawable/border"
+            android:hint="years"
+            android:inputType="number"
+            android:textColor="#000000"
+            android:textColorHint="#757575"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginEnd="55dp" /> <!-- Add margin to the right (end) -->
+
+
+    </LinearLayout>
+
+    <!-- Gender Input -->
+    <RadioGroup
+        android:id="@+id/genderRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ageInput"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Gender"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:shadowColor="#80000000"
+            android:shadowDx="4"
+            android:shadowDy="4"
+            android:shadowRadius="6"
+            />
+
+        <RadioButton
+            android:id="@+id/maleRadioButton"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:text="Male"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            android:shadowColor="#80000000"
+            android:shadowDx="4"
+            android:shadowDy="4"
+            android:shadowRadius="6"/>
+
+
+        <RadioButton
+            android:id="@+id/femaleRadioButton"
+            android:layout_width="130dp"
+            android:layout_height="48dp"
+            android:text="Female"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            android:shadowColor="#80000000"
+            android:shadowDx="4"
+            android:shadowDy="4"
+            android:shadowRadius="6"/>
+    </RadioGroup>
+
+    <!-- Height Input -->
+    <LinearLayout
+        android:id="@+id/heightInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/genderRadioGroup"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Height"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:shadowColor="#80000000"
+            android:shadowDx="4"
+            android:shadowDy="4"
+            android:shadowRadius="6"/>
+
+        <EditText
+            android:id="@+id/feetEditText"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:background="@drawable/border"
+            android:hint="ft"
+            android:inputType="number"
+            android:textColor="#000000"
+            android:textColorHint="#757575"
+            android:textSize="20sp"
+            android:gravity="center"
+            />
+
+        <EditText
+            android:id="@+id/inchesEditText"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:background="@drawable/border"
+            android:hint="in"
+            android:inputType="number"
+            android:textColor="#000000"
+            android:textColorHint="#757575"
+            android:gravity="center"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Weight Input -->
+    <LinearLayout
+        android:id="@+id/weightInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heightInput"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Weight"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:shadowColor="#80000000"
+            android:shadowDx="4"
+            android:shadowDy="4"
+            android:shadowRadius="6"/>
+
+        <EditText
+            android:id="@+id/weightEditText"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:hint="weight"
+            android:background="@drawable/border"
+            android:inputType="number"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textColorHint="#757575"
+            android:gravity="center"
+            />
+
+        <Spinner
+            android:id="@+id/weightUnitSpinner"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Activity Level Selection -->
+
+    <LinearLayout
+        android:id="@+id/activitylevel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weightInput"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Activity Level"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:shadowColor="#80000000"
+        android:shadowDx="4"
+        android:shadowDy="4"
+        android:shadowRadius="6"/>
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/activityLevelSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/activitylevel"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/border"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp" />
+    <!-- ... Previous code ... -->
+
+    <!-- Climate Input -->
+    <LinearLayout
+        android:id="@+id/climateInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activityLevelSpinner"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Climate"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:shadowColor="#80000000"
+            android:shadowDx="4"
+            android:shadowDy="4"
+            android:shadowRadius="6"/>
+
+        <Spinner
+            android:id="@+id/climateSpinner"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_marginEnd="55dp"
+            />
+
+    </LinearLayout>
+
+    <!-- ... Previous code ... -->
+
+
+
+    <!-- Calculate Button -->
+
+    <!-- Recommended Water Intake -->
+
+    <!-- Bottom Navigation Bar -->
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+    android:layout_below="@+id/climateInput"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button"
+        android:text="Calculate"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/recommendedIntakeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/calculateButton"
+        android:layout_marginTop="10dp"
+        android:text="Recommended water intake"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:textSize="25dp"
+        android:shadowColor="#80000000"
+        android:shadowDx="4"
+        android:shadowDy="4"
+        android:shadowRadius="6"/>
+
+    <TextView
+        android:id="@+id/recommendedIntakeValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recommendedIntakeLabel"
+        android:layout_marginTop="5dp"
+        android:text=""
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:id="@+id/bottomNavigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="#5b8bdf"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/homeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:text="Home"
+            android:textColor="#ffffff"
+            android:background="@drawable/button"
+            android:clickable="true"
+            android:onClick="onHomeButtonClick"
+            android:contentDescription="Home"
+            android:layout_marginStart="32dp" />
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:text="Next"
+            android:textColor="#ffffff"
+            android:background="@drawable/button"
+            android:clickable="true"
+            android:onClick="onNextButtonClick"
+            android:contentDescription="Next"
+            android:layout_marginEnd="32dp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
