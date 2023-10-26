@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="goalUnitSpinner" type="id"/>
+    <item name="progressTextView1" type="id"/>
+    <item name="litersEditText" type="id"/>
+    <item name="millilitersEditText" type="id"/>
+    <item name="glassesEditText" type="id"/>
+</resources>

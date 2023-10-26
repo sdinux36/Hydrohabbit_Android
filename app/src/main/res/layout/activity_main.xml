@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText"
+
+    >
+
+
+
+
+
+    <!--IM-2020-078-->
+     <!--Spinner/dropdown menu related to water intake-->
+    <Spinner
+        android:id="@+id/intakeUnitSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="178dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
+        android:entries="@array/unit_options"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/intakeEditText"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+
+    <!--water intake goal main title-->
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="108dp"
+        android:layout_marginBottom="16dp"
+        android:padding="8dp"
+        android:text="Water Intake Goal"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <!--enter your goal sub title-->
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="138dp"
+        android:layout_marginBottom="45dp"
+        android:padding="8dp"
+        android:text="Enter Your Goal"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/goalEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+
+    <!-- Goal EditText in Rectangle Shape -->
+    <EditText
+        android:id="@+id/goalEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="145dp"
+        android:background="@android:color/holo_blue_light"
+
+        android:hint="@string/daily_goal"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColorHint="#546E7A"
+        app:layout_constraintEnd_toStartOf="@+id/goalUnitSpinner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:ignore="Autofill,MissingConstraints,VisualLintTextFieldSize" />
+
+
+    <!-- Water Intake Entry Section -->
+    <!-- Intake EditText in Rectangle Shape -->
+
+    <EditText
+        android:id="@+id/intakeEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="51dp"
+        android:background="@android:color/holo_blue_light"
+        android:hint="@string/drink"
+        android:inputType="numberDecimal"
+        android:paddingStart="8dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="4dp"
+        android:textColorHint="#546E7A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        tools:ignore="Autofill,MissingConstraints,TouchTargetSizeCheck" />
+
+    <!--Spinner/dropdown menu related to daily goal-->
+
+    <Spinner
+        android:id="@+id/goalUnitSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="48dp"
+        android:entries="@array/unit_options"
+        app:layout_constraintStart_toEndOf="@+id/goalEditText"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+
+    <!-- Current Progress Section -->
+
+    <TextView
+        android:id="@+id/progressTextLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="129dp"
+        android:layout_marginEnd="145dp"
+        android:layout_marginBottom="24dp"
+        android:text="Current Progress"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/totalWaterIntake"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <TextView
+        android:id="@+id/totalWaterIntake"
+        android:layout_width="141dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="100dp"
+        android:background="@android:color/holo_blue_light"
+        android:paddingHorizontal="5px"
+        android:paddingVertical="15px"
+        android:text="Total Water Intake : 0L"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <TextView
+        android:id="@+id/progressTextView"
+        android:layout_width="98dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="100dp"
+        android:background="@android:color/holo_blue_light"
+        android:paddingHorizontal="5px"
+        android:paddingVertical="15px"
+        android:text="Progress 0%"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <!--part of water intake section-->
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="89dp"
+        android:layout_marginBottom="51dp"
+        android:text="@string/enter_each_water_intake"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/intakeUnitSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goalEditText"
+        tools:ignore="MissingConstraints" />
+    <!--part of water intake section-->
+
+
+    <Button
+        android:id="@+id/addIntake"
+        android:layout_width="157dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="36dp"
+        android:text="@string/add_intake"
+        android:textColorHighlight="#2196F3"
+        android:textColorLink="#03A9F4"
+        app:iconTint="#2196F3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <Button
+        android:id="@+id/resetIntake"
+        android:layout_width="153dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="11dp"
+        android:text="@string/reset_intake"
+        app:layout_constraintEnd_toStartOf="@+id/addIntake"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/intakeEditText" />
+
+    <!--IM-2020-078-->
+</androidx.constraintlayout.widget.ConstraintLayout>
